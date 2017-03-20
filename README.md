@@ -22,6 +22,8 @@
   - `node 6.6` and higher!
     - [*you can use a version manager like `n`*](https://github.com/tj/n)
 
+  - 'mongoDB 3.4.2' for windows
+
 ***
 
 ### Usage
