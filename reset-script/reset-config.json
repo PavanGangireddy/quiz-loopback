@@ -1,0 +1,52 @@
+{  
+   "dataSources":{  
+      "mongodb":{  
+         "host":"127.0.0.1",
+         "port":27017,
+         "url":"",
+         "database":"getting_started_intermediate",
+         "name":"mongodb",
+         "connector":"mongodb"
+      }
+   },
+   "models":{  
+      "Customer": {
+         "dataSource": "mongodb",
+         "public": true
+      }
+   },
+   "modelDefinitions":[  
+      {
+        "name": "Customer",
+        "definition":{  
+            "name":"Customer"
+         },
+        "base": "PersistedModel",
+        "idInjection": true,
+        "options": {
+          "validateUpsert": true
+        },
+        "properties": {
+          "name": {
+            "type": "string",
+            "required": true
+          },
+          "age": {
+            "type": "number",
+            "required":true
+          },
+          "gender": {
+            "type": "string",
+            "required": true
+          }
+        },
+        "validations": [],
+        "relations": {},
+        "acls": [],
+        "methods": {}
+      }
+   ],
+   "bootScripts":[  
+      "./reset-script/index.js"
+   ]
+}
